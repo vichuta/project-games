@@ -25,16 +25,6 @@ module.exports = {
       lg: '1.2rem',
       xl: '1.5rem'
     }
-    // ,
-    // extend: {
-    //   backdropOpacity: {
-    //     10: '.10',
-    //   },
-    //   backdropSepia: {
-    //     0: '.0',
-    //     75: '.75',
-    //   }
-    // }
   },
   plugins: [],
 }
