@@ -5,7 +5,7 @@
 ### Feature เพิ่มเติม
 - รูปแบบ design ลองใช้เป็นธีม Glassmorphism และ background เปลี่ยนสีได้
 - Searching ค้นหาชื่อเกม
-- Read more เปิดอ่่าน description
+- Read more เปิดอ่าน description
 - Loading จะแสดงขึ้นมาตอนระหว่างรอ fecth ข้อมูล
 
 ## Recommended IDE Setup
