@@ -16,11 +16,10 @@
         </div>
       </nav>
   </header>
+
   <RouterView/>
+  
 </template>
 
 <style scoped>
-*{
-  font-family: font-sans;
-}
 </style>

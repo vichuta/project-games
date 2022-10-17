@@ -8,6 +8,7 @@ const {params} = useRoute()
 const myRouter = useRouter()
 const goToHome = () => myRouter.push({name:'home'})
 
+// -- function GET Detail API --
 const thisGame = ref([])
 const loadingStatus = ref(false)
 const message = ref("")
@@ -44,8 +45,9 @@ onBeforeMount(async()=> await getGameById(params.gameId))
     <LoadingIcon/>
   </div>
   
-<!-- // Message Error -->
-  <div v-else-if="message!==''" class="mt-32 text-red-500 text-center font-sans text-base">{{message}}</div>
+  <!-- // Error message 
+    (ถ้า id ของ url : /detail/{id} ไม่มีข้อมูล จะมี error message "Not found this game id: {id}")-->
+  <div v-else-if="message!==''" class="mt-32 text-red-400 text-center font-sans text-base">{{message}}</div>
 
   <ShowDetailGame v-else
     :thisGame="thisGame"

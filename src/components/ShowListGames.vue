@@ -57,7 +57,7 @@ const clearInput = () => {nameSearch.value=""}
             border-white border-solid border
             transition duration-300
             hover:scale-105 hover:delay-100 hover:drop-shadow-2xl">
-          <!-- // Content -->
+          <!-- // Content for Searching -->
           <div class="m-2 md:m-3 lg:m-4
                       flex flex-row md:flex-col items-start">
             <img :src="game.thumbnail" 
@@ -71,8 +71,8 @@ const clearInput = () => {nameSearch.value=""}
               <p class="pb-3 text-white text-sm md:text-md">
                 {{game.short_description}}
               </p>
+            </div>
           </div>
-        </div>
     </div>
   </div>
   <!-- // Searched not found -->

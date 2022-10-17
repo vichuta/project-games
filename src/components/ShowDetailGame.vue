@@ -19,8 +19,8 @@ const showReadMore = () => {readMoreMode.value=true}
         <button @click="$emit('goToHome')" 
         class="underline opacity-70 hover:opacity-100">
           List</button> 
-        <span class="opacity-70"> / 
-          {{thisGame.title}}</span>
+        <span class="opacity-70">
+           / {{thisGame.title}}</span>
       </h3>
     </div>
         <!-- // Card Detail -->
@@ -32,14 +32,13 @@ const showReadMore = () => {readMoreMode.value=true}
             <h3 class="py-2 sm:py-3 mx-2
                        font-bold text-white text-lg md:text-xl">
               {{thisGame.title}}</h3>
+            <!-- // Read more description -->
             <p v-if="!readMoreMode" 
                 class="mx-2 mb-3 text-white text-md md:text-base">
               {{thisGame.short_description}}</p>
             <p v-else 
                 class="mx-2 mb-3 text-white text-md md:text-base">
               {{thisGame.description}}</p>
-            
-            <!-- Read more -->
             <button v-show="!readMoreMode" @click="showReadMore()"
               class="mx-3 py-1 px-10 rounded-full
                      bg-white/20 backdrop-sepia-0 border-white border-solid border 
