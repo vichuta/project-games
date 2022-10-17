@@ -1,5 +1,7 @@
 <script setup>
 import {ref, computed} from 'vue'
+import SearchIcon from './icons/serachIcon.vue'
+import CloseIcon from './icons/closeIcon.vue'
 
 defineEmits(['goToViewDetail'])
 const props = defineProps({
@@ -23,6 +25,7 @@ const searching = computed(() => {
   }
   return false
 })
+const clearInput = () => {nameSearch.value=""}
 </script>
 
 <template>
@@ -30,16 +33,13 @@ const searching = computed(() => {
   <div class="mt-20 mx-2 max-w-screen-lg md:mx-10 lg:mx-10 xl:mx-auto">
     <div class="m-2 flex items-center">
       <!-- search icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-6 md:h-6 mr-2 text-white" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-    </svg>
+      <SearchIcon/>
       <!-- search input -->
-    <input type="text" name="name" placeholder="Search game by name" v-model="nameSearch" maxlength="200"
+      <input type="text" name="name" placeholder="Search game by name" v-model="nameSearch" maxlength="200"
         class="bg-inherit px-3 outline-none text-white placeholder:text-white placeholder:opacity-60
                w-full sm:w-1/2 md:w-72 lg:w-96 py-1 
                border-b border-blue-400 focus:border-white focus:bg-inherit">
+      <CloseIcon @click="clearInput()" v-show="searching"/>
     </div>
   </div>
 
